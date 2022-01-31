@@ -45,7 +45,7 @@ class Transformer(nn.Module):
     def _reset_parameters(self):
         for p in self.parameters():
             if p.dim() > 1:
-                nn.init.xavier_uniform_(p)  #xavier初始化（均匀分布）
+                nn.init.xavier_uniform_(p)  
 
     def forward(self, src, mask, query_embed, pos_embed):  
         # flatten NxCxHxW to HWxNxC   
